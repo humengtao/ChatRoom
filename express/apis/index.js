@@ -1,6 +1,5 @@
 var router = require('express').Router();
 var mysql = require('mysql');
-var markdown = require("markdown").markdown;
 
 var connection = mysql.createConnection({
     host: 'localhost',
