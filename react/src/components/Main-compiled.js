@@ -18,6 +18,10 @@ var _InputBox = require('./InputBox');
 
 var _InputBox2 = _interopRequireDefault(_InputBox);
 
+var _socket = require('socket.io-client');
+
+var _socket2 = _interopRequireDefault(_socket);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29,13 +33,20 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
+var socket = (0, _socket2.default)('http://localhost:3000');
+
 var AppComponent = function (_React$Component) {
   _inherits(AppComponent, _React$Component);
 
   function AppComponent() {
     _classCallCheck(this, AppComponent);
 
-    return _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this));
+
+    socket.on('server:connection', function (data) {
+      console.log(data);
+    });
+    return _this;
   }
 
   _createClass(AppComponent, [{
