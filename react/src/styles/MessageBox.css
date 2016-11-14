@@ -1,0 +1,10 @@
+.message-box{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  width: 80%;
+  background-color: #fafafa;
+  color: #2e2e2e;
+  overflow-y: auto;
+}

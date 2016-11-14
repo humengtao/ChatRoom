@@ -2,20 +2,20 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-
-let yeomanImage = require('../images/yeoman.png');
+import MessageBox from './MessageBox';
+import InputBox from './InputBox';
 
 class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-          <h1>hello</h1> 
+        <MessageBox/>
+        <InputBox/>
       </div>
     );
   }
 }
 
-AppComponent.defaultProps = {
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;
