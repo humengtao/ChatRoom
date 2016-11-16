@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74a72513-b085-4af2-b905-b4d120e1137a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/express/bin/www" afterPath="$PROJECT_DIR$/express/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox.js" afterPath="$PROJECT_DIR$/react/src/components/InputBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/Main-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/Main-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main.js" afterPath="$PROJECT_DIR$/react/src/components/Main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox.js" afterPath="$PROJECT_DIR$/react/src/components/MessageBox.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit.js" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/styles/InputBox.css" afterPath="$PROJECT_DIR$/react/src/styles/InputBox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/styles/MessageBox.css" afterPath="$PROJECT_DIR$/react/src/styles/MessageBox.css" />
     </list>
     <ignored path="ChatRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageBox.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageBox.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/src/components/MessageBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding>
                 <element signature="e#62#88#0" expanded="true" />
               </folding>
@@ -67,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageUnit.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MessageUnit.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react/src/components/MessageUnit.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -96,8 +90,8 @@
       <file leaf-file-name="MessageBox.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/src/styles/MessageBox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="15">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -126,8 +120,8 @@
       <file leaf-file-name="InputBox.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/src/styles/InputBox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,12 +149,12 @@
         <option value="$PROJECT_DIR$/react/src/index.html" />
         <option value="$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/live.js" />
         <option value="$PROJECT_DIR$/react/src/styles/App.css" />
+        <option value="$PROJECT_DIR$/react/src/components/InputBox.js" />
+        <option value="$PROJECT_DIR$/react/src/components/Main.js" />
+        <option value="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
+        <option value="$PROJECT_DIR$/react/src/components/MessageBox.js" />
         <option value="$PROJECT_DIR$/react/src/styles/InputBox.css" />
         <option value="$PROJECT_DIR$/react/src/styles/MessageBox.css" />
-        <option value="$PROJECT_DIR$/react/src/components/InputBox.js" />
-        <option value="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
-        <option value="$PROJECT_DIR$/react/src/components/Main.js" />
-        <option value="$PROJECT_DIR$/react/src/components/MessageBox.js" />
       </list>
     </option>
   </component>
@@ -389,12 +383,12 @@
       <updated>1479106031653</updated>
       <workItem from="1479106035581" duration="8644000" />
       <workItem from="1479130798922" duration="2064000" />
-      <workItem from="1479254347536" duration="7107000" />
+      <workItem from="1479254347536" duration="8163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17815000" />
+    <option name="totallyTimeSpent" value="18871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="957" extended-state="6" />
@@ -680,26 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/InputBox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/styles/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageBox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -726,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/components/MessageUnit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/components/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -747,11 +717,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/src/components/MessageBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding>
             <element signature="e#62#88#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/InputBox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageBox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/MessageUnit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

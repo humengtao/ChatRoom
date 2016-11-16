@@ -39,7 +39,12 @@ var MessageBox = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
 
-    socket.on('server:broadcast', function (data) {});
+    _this.state = {
+      children: []
+    };
+    socket.on('server:broadcast', function (data) {
+      _this.addUnit(data);
+    });
     return _this;
   }
 
@@ -49,6 +54,15 @@ var MessageBox = function (_React$Component) {
       this.setState({
         height: $(window).height() * 0.8
       });
+    }
+  }, {
+    key: 'addUnit',
+    value: function addUnit(data) {
+      this.state.children.push(data);
+      this.setState({
+        children: this.state.children
+      });
+      console.log(data);
     }
   }, {
     key: 'render',
@@ -61,7 +75,9 @@ var MessageBox = function (_React$Component) {
           ref: function ref(div) {
             return _this2.msgBox = div;
           } },
-        this.props.children
+        this.state.children.map(function (data, index) {
+          return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg });
+        })
       );
     }
   }]);
