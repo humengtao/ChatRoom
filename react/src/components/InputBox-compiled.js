@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _socket = require('socket.io-client');
+
+var _socket2 = _interopRequireDefault(_socket);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,25 +27,54 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 require('styles/InputBox.css');
 
+var socket = (0, _socket2.default)('http://localhost:3000');
+
 var InputBox = function (_React$Component) {
   _inherits(InputBox, _React$Component);
 
   function InputBox() {
     _classCallCheck(this, InputBox);
 
-    return _possibleConstructorReturn(this, (InputBox.__proto__ || Object.getPrototypeOf(InputBox)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (InputBox.__proto__ || Object.getPrototypeOf(InputBox)).call(this));
+
+    _this.state = {
+      msg: ''
+    };
+    _this.sendMsg = _this.sendMsg.bind(_this);
+    _this.setMsg = _this.setMsg.bind(_this);
+    return _this;
   }
 
   _createClass(InputBox, [{
+    key: 'sendMsg',
+    value: function sendMsg() {
+      socket.emit('client:send', { msg: this.state.msg });
+      this.setState({
+        msg: ''
+      });
+      this.textInput.value = '';
+    }
+  }, {
+    key: 'setMsg',
+    value: function setMsg(e) {
+      this.setState({
+        msg: e.target.value
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('textarea', { name: 'input', id: 'input' }),
+        _react2.default.createElement('textarea', { name: 'input', id: 'input', onChange: this.setMsg, ref: function ref(input) {
+            return _this2.textInput = input;
+          } }),
         _react2.default.createElement(
           'button',
-          { id: 'send' },
+          { id: 'send', onClick: this.sendMsg },
           'send'
         )
       );

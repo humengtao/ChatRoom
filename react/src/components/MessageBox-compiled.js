@@ -14,6 +14,10 @@ var _MessageUnit = require('./MessageUnit');
 
 var _MessageUnit2 = _interopRequireDefault(_MessageUnit);
 
+var _socket = require('socket.io-client');
+
+var _socket2 = _interopRequireDefault(_socket);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25,27 +29,39 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 require('styles/MessageBox.css');
 var $ = require('jquery');
 
+var socket = (0, _socket2.default)('http://localhost:3000');
+
 var MessageBox = function (_React$Component) {
   _inherits(MessageBox, _React$Component);
 
   function MessageBox() {
     _classCallCheck(this, MessageBox);
 
-    return _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
+
+    socket.on('server:broadcast', function (data) {});
+    return _this;
   }
 
   _createClass(MessageBox, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      this.setState({ height: $(window).height() * 0.8 });
+      this.setState({
+        height: $(window).height() * 0.8
+      });
     }
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
-        { className: 'message-box', id: 'message-box', style: { height: this.state.height } },
-        _react2.default.createElement(_MessageUnit2.default, null)
+        { className: 'message-box', id: 'message-box', style: { height: this.state.height },
+          ref: function ref(div) {
+            return _this2.msgBox = div;
+          } },
+        this.props.children
       );
     }
   }]);
