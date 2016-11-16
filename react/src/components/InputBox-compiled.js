@@ -35,11 +35,14 @@ var InputBox = function (_React$Component) {
   function InputBox() {
     _classCallCheck(this, InputBox);
 
+    // init msg
     var _this = _possibleConstructorReturn(this, (InputBox.__proto__ || Object.getPrototypeOf(InputBox)).call(this));
 
     _this.state = {
       msg: ''
     };
+
+    // bind function to this
     _this.sendMsg = _this.sendMsg.bind(_this);
     _this.setMsg = _this.setMsg.bind(_this);
     return _this;
@@ -48,6 +51,7 @@ var InputBox = function (_React$Component) {
   _createClass(InputBox, [{
     key: 'sendMsg',
     value: function sendMsg() {
+      // emit event of send msg
       socket.emit('client:send', { msg: this.state.msg });
       this.setState({
         msg: ''

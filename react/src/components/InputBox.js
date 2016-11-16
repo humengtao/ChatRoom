@@ -10,14 +10,18 @@ let socket = io('http://localhost:3000');
 class InputBox extends React.Component {
   constructor() {
     super();
+    // init msg
     this.state={
       msg: ''
     };
+
+    // bind function to this
     this.sendMsg=this.sendMsg.bind(this);
     this.setMsg=this.setMsg.bind(this);
   }
 
   sendMsg() {
+    // emit event of send msg
     socket.emit('client:send',{msg:this.state.msg});
     this.setState({
       msg:''

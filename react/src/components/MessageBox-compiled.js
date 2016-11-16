@@ -37,11 +37,14 @@ var MessageBox = function (_React$Component) {
   function MessageBox() {
     _classCallCheck(this, MessageBox);
 
+    // init children
     var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
 
     _this.state = {
       children: []
     };
+
+    // set socket event listener
     socket.on('server:broadcast', function (data) {
       _this.addUnit(data);
     });
@@ -51,10 +54,15 @@ var MessageBox = function (_React$Component) {
   _createClass(MessageBox, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
+
+      // dynamically set message box height
       this.setState({
         height: $(window).height() * 0.8
       });
     }
+
+    // add child
+
   }, {
     key: 'addUnit',
     value: function addUnit(data) {
@@ -62,7 +70,6 @@ var MessageBox = function (_React$Component) {
       this.setState({
         children: this.state.children
       });
-      console.log(data);
     }
   }, {
     key: 'render',
