@@ -4,8 +4,7 @@
 require('styles/InputBox.css');
 
 import React from 'react';
-import io from 'socket.io-client';
-let socket = io('http://localhost:3000');
+import action from '../actions/SocketAction';
 
 class InputBox extends React.Component {
   constructor() {
@@ -14,15 +13,12 @@ class InputBox extends React.Component {
     this.state={
       msg: ''
     };
-
-    // bind function to this
-    this.sendMsg=this.sendMsg.bind(this);
-    this.setMsg=this.setMsg.bind(this);
   }
 
   sendMsg() {
     // emit event of send msg
-    socket.emit('client:send',{msg:this.state.msg});
+    let data={msg:this.state.msg};
+    action.send(data);
     this.setState({
       msg:''
     });
@@ -38,9 +34,9 @@ class InputBox extends React.Component {
   render() {
     return (
       <div>
-        <textarea name="input" id="input" onChange={this.setMsg} ref={(input) => this.textInput = input} placeholder="请在这里输入内容">
+        <textarea name="input" id="input" onChange={this.setMsg.bind(this)} ref={(input) => this.textInput = input} placeholder="请在这里输入内容">
       </textarea>
-        <button id="send" onClick={this.sendMsg}>
+        <button id="send" onClick={this.sendMsg.bind(this)}>
           send
         </button>
       </div>

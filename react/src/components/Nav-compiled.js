@@ -20,11 +20,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-/**
- * Created by humengtao on 2016/11/17.
- */
-require('styles/Nav.css');
-
 var Nav = function (_React$Component) {
   _inherits(Nav, _React$Component);
 
@@ -41,19 +36,33 @@ var Nav = function (_React$Component) {
         'div',
         { className: 'nav' },
         _react2.default.createElement(
-          'nav',
+          'ul',
           null,
           _react2.default.createElement(
-            'ul',
+            'li',
             null,
             _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/login' },
-                'Home'
-              )
+              _reactRouter.Link,
+              { to: '/' },
+              'Home'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/login' },
+              'Login'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/register' },
+              'Register'
             )
           )
         )

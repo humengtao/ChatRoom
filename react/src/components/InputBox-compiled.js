@@ -10,9 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _socket = require('socket.io-client');
+var _SocketAction = require('../actions/SocketAction');
 
-var _socket2 = _interopRequireDefault(_socket);
+var _SocketAction2 = _interopRequireDefault(_SocketAction);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,8 +27,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 require('styles/InputBox.css');
 
-var socket = (0, _socket2.default)('http://localhost:3000');
-
 var InputBox = function (_React$Component) {
   _inherits(InputBox, _React$Component);
 
@@ -41,10 +39,6 @@ var InputBox = function (_React$Component) {
     _this.state = {
       msg: ''
     };
-
-    // bind function to this
-    _this.sendMsg = _this.sendMsg.bind(_this);
-    _this.setMsg = _this.setMsg.bind(_this);
     return _this;
   }
 
@@ -52,7 +46,8 @@ var InputBox = function (_React$Component) {
     key: 'sendMsg',
     value: function sendMsg() {
       // emit event of send msg
-      socket.emit('client:send', { msg: this.state.msg });
+      var data = { msg: this.state.msg };
+      _SocketAction2.default.send(data);
       this.setState({
         msg: ''
       });
@@ -73,12 +68,12 @@ var InputBox = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('textarea', { name: 'input', id: 'input', onChange: this.setMsg, ref: function ref(input) {
+        _react2.default.createElement('textarea', { name: 'input', id: 'input', onChange: this.setMsg.bind(this), ref: function ref(input) {
             return _this2.textInput = input;
           }, placeholder: '请在这里输入内容' }),
         _react2.default.createElement(
           'button',
-          { id: 'send', onClick: this.sendMsg },
+          { id: 'send', onClick: this.sendMsg.bind(this) },
           'send'
         )
       );

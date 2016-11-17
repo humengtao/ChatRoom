@@ -20,6 +20,10 @@ var _InputBox2 = _interopRequireDefault(_InputBox);
 
 var _reactRouter = require('react-router');
 
+var _SocketAction = require('../actions/SocketAction');
+
+var _SocketAction2 = _interopRequireDefault(_SocketAction);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37,7 +41,10 @@ var AppComponent = function (_React$Component) {
   function AppComponent() {
     _classCallCheck(this, AppComponent);
 
-    return _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this));
+
+    _SocketAction2.default.socket();
+    return _this;
   }
 
   _createClass(AppComponent, [{

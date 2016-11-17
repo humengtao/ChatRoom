@@ -5,7 +5,13 @@ import React from 'react';
 import MessageBox from './MessageBox';
 import InputBox from './InputBox';
 import {Link} from 'react-router';
+import action from '../actions/SocketAction';
+
 class AppComponent extends React.Component {
+  constructor(){
+    super();
+    action.socket();
+  }
   render() {
     return (
       <div className="index">

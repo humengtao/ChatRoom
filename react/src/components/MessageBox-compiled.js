@@ -10,13 +10,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reflux = require('reflux');
+
+var _reflux2 = _interopRequireDefault(_reflux);
+
+var _reactMixin = require('react-mixin');
+
+var _reactMixin2 = _interopRequireDefault(_reactMixin);
+
 var _MessageUnit = require('./MessageUnit');
 
 var _MessageUnit2 = _interopRequireDefault(_MessageUnit);
 
-var _socket = require('socket.io-client');
+var _SocketAction = require('../actions/SocketAction');
 
-var _socket2 = _interopRequireDefault(_socket);
+var _SocketAction2 = _interopRequireDefault(_SocketAction);
+
+var _SocketStore = require('../stores/SocketStore');
+
+var _SocketStore2 = _interopRequireDefault(_SocketStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,7 +41,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 require('styles/MessageBox.css');
 
 var $ = require('jquery');
-var socket = (0, _socket2.default)('http://localhost:3000');
 
 var MessageBox = function (_React$Component) {
   _inherits(MessageBox, _React$Component);
@@ -37,38 +48,18 @@ var MessageBox = function (_React$Component) {
   function MessageBox() {
     _classCallCheck(this, MessageBox);
 
-    // init children
     var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
 
-    _this.state = {
-      children: []
-    };
-
-    // set socket event listener
-    socket.on('server:broadcast', function (data) {
-      _this.addUnit(data);
-    });
+    _SocketAction2.default.get();
     return _this;
   }
 
   _createClass(MessageBox, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-
       // dynamically set message box height
       this.setState({
         height: $(window).height() * 0.5
-      });
-    }
-
-    // add child
-
-  }, {
-    key: 'addUnit',
-    value: function addUnit(data) {
-      this.state.children.push(data);
-      this.setState({
-        children: this.state.children
       });
     }
   }, {
@@ -76,21 +67,29 @@ var MessageBox = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react2.default.createElement(
-        'div',
-        { className: 'message-box', id: 'message-box', style: { height: this.state.height },
-          ref: function ref(div) {
-            return _this2.msgBox = div;
-          } },
-        this.state.children.map(function (data, index) {
-          return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg });
-        })
-      );
+      if (!!this.state.store) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'message-box', id: 'message-box', style: { height: this.state.height },
+            ref: function ref(div) {
+              return _this2.msgBox = div;
+            } },
+          this.state.store.map(function (data, index) {
+            if (!!data.msg) return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg });
+          })
+        );
+      }
+      return _react2.default.createElement('div', { className: 'message-box', id: 'message-box', style: { height: this.state.height },
+        ref: function ref(div) {
+          return _this2.msgBox = div;
+        } });
     }
   }]);
 
   return MessageBox;
 }(_react2.default.Component);
+
+_reactMixin2.default.onClass(MessageBox, _reflux2.default.connect(_SocketStore2.default, 'store'));
 
 exports.default = MessageBox;
 
