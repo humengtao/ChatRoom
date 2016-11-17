@@ -4,6 +4,7 @@
 require('styles/Register.css');
 
 import React from 'react';
+import {Link} from 'react-router';
 
 class Register extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Register extends React.Component {
         <form method="post" action="">
           Username: <input type="text" name="name"/>
           Password: <input type="password" name="password"/>
+          已注册账号,<Link to="/login">去登陆</Link>
           <input type="submit" value="submit"/>
         </form>
       </div>

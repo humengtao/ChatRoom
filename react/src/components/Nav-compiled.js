@@ -6,17 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _reactRouter = require('react-router');
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _MessageUnit = require('./MessageUnit');
-
-var _MessageUnit2 = _interopRequireDefault(_MessageUnit);
-
-var _socket = require('socket.io-client');
-
-var _socket2 = _interopRequireDefault(_socket);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,72 +20,50 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-require('styles/MessageBox.css');
+/**
+ * Created by humengtao on 2016/11/17.
+ */
+require('styles/Nav.css');
 
-var $ = require('jquery');
-var socket = (0, _socket2.default)('http://localhost:3000');
+var Nav = function (_React$Component) {
+  _inherits(Nav, _React$Component);
 
-var MessageBox = function (_React$Component) {
-  _inherits(MessageBox, _React$Component);
+  function Nav() {
+    _classCallCheck(this, Nav);
 
-  function MessageBox() {
-    _classCallCheck(this, MessageBox);
-
-    // init children
-    var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
-
-    _this.state = {
-      children: []
-    };
-
-    // set socket event listener
-    socket.on('server:broadcast', function (data) {
-      _this.addUnit(data);
-    });
-    return _this;
+    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
   }
 
-  _createClass(MessageBox, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-
-      // dynamically set message box height
-      this.setState({
-        height: $(window).height() * 0.8
-      });
-    }
-
-    // add child
-
-  }, {
-    key: 'addUnit',
-    value: function addUnit(data) {
-      this.state.children.push(data);
-      this.setState({
-        children: this.state.children
-      });
-    }
-  }, {
+  _createClass(Nav, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       return _react2.default.createElement(
         'div',
-        { className: 'message-box', id: 'message-box', style: { height: this.state.height },
-          ref: function ref(div) {
-            return _this2.msgBox = div;
-          } },
-        this.state.children.map(function (data, index) {
-          return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg });
-        })
+        { className: 'nav' },
+        _react2.default.createElement(
+          'nav',
+          null,
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/login' },
+                'Home'
+              )
+            )
+          )
+        )
       );
     }
   }]);
 
-  return MessageBox;
+  return Nav;
 }(_react2.default.Component);
 
-exports.default = MessageBox;
+exports.default = Nav;
 
-//# sourceMappingURL=MessageBox-compiled.js.map
+//# sourceMappingURL=Nav-compiled.js.map

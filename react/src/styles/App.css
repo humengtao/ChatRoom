@@ -13,7 +13,9 @@ body {
   text-align: center;
   color: goldenrod;
 }
-
+a{
+  color: gold;
+}
 .index img {
   margin: 40px auto;
   border-radius: 4px;

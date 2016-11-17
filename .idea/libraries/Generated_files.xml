@@ -75,8 +75,11 @@
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/exports/amd-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/effects/Tween-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/jquery-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/RouteMap-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/event-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/components/Nav-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/wrap-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/Route-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/queue-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/attributes/val-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/attributes/prop-compiled.js" />
@@ -194,8 +197,11 @@
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/exports/amd-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/effects/Tween-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/jquery-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/RouteMap-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/event-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/components/Nav-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/wrap-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/Route-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/queue-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/attributes/val-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/attributes/prop-compiled.js" />

@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = require('react-router');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,6 +52,12 @@ var Register = function (_React$Component) {
           _react2.default.createElement('input', { type: 'text', name: 'name' }),
           'Password: ',
           _react2.default.createElement('input', { type: 'password', name: 'password' }),
+          '已注册账号,',
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/login' },
+            '去登陆'
+          ),
           _react2.default.createElement('input', { type: 'submit', value: 'submit' })
         )
       );
