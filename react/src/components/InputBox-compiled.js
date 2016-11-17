@@ -75,7 +75,7 @@ var InputBox = function (_React$Component) {
         null,
         _react2.default.createElement('textarea', { name: 'input', id: 'input', onChange: this.setMsg, ref: function ref(input) {
             return _this2.textInput = input;
-          } }),
+          }, placeholder: '请在这里输入内容' }),
         _react2.default.createElement(
           'button',
           { id: 'send', onClick: this.sendMsg },

@@ -38,7 +38,7 @@ class InputBox extends React.Component {
   render() {
     return (
       <div>
-        <textarea name="input" id="input" onChange={this.setMsg} ref={(input) => this.textInput = input}>
+        <textarea name="input" id="input" onChange={this.setMsg} ref={(input) => this.textInput = input} placeholder="请在这里输入内容">
       </textarea>
         <button id="send" onClick={this.sendMsg}>
           send

@@ -13,6 +13,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
+        <h1>ChatRoom</h1>
         <MessageBox/>
         <InputBox/>
       </div>

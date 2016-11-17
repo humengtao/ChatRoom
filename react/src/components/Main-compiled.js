@@ -44,6 +44,11 @@ var AppComponent = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'index' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'ChatRoom'
+        ),
         _react2.default.createElement(_MessageBox2.default, null),
         _react2.default.createElement(_InputBox2.default, null)
       );
