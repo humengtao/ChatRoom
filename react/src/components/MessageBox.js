@@ -1,14 +1,16 @@
 require('styles/MessageBox.css');
-let $ = require('jquery');
 
 import React from 'react';
 import MessageUnit from './MessageUnit'
 import io from 'socket.io-client';
+
+let $ = require('jquery');
 let socket = io('http://localhost:3000');
 
 class MessageBox extends React.Component {
   constructor() {
     super();
+
     // init children
     this.state = {
       children: []

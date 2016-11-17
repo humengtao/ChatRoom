@@ -1,0 +1,11 @@
+.message-unit{
+  background-color: #2e2e2e;
+  color: goldenrod;
+  display: table;
+  padding:10px;
+  margin:20px 30px;
+  font-size: 28px;
+  font-family: serif;
+  border-radius: 5px;
+}
+
