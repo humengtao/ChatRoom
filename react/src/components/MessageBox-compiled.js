@@ -57,7 +57,7 @@ var MessageBox = function (_React$Component) {
 
       // dynamically set message box height
       this.setState({
-        height: $(window).height() * 0.8
+        height: $(window).height() * 0.5
       });
     }
 
