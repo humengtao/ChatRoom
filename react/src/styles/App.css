@@ -2,9 +2,10 @@
 body {
   color: #fff;
   background: #222;
-  font-family:SansSerif;
 }
-
+*{
+  font-family: "Andale Mono";
+}
 .index img {
   margin: 40px auto;
   border-radius: 4px;
