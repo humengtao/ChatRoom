@@ -3,6 +3,7 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/swap-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/index-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/rnumnonpx-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/rmargin-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/isHiddenWithinTree-compiled.js" />
@@ -105,8 +106,10 @@
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/traversing-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/deprecated-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/serialize-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/components/Login-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/selector-native-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/dist/core-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/components/Register-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/manipulation-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/selector-sizzle-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/dist/jquery.slim.min-compiled.js" />
@@ -119,6 +122,7 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/swap-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/index-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/rnumnonpx-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/rmargin-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/css/var/isHiddenWithinTree-compiled.js" />
@@ -221,8 +225,10 @@
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/traversing-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/deprecated-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/serialize-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/components/Login-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/selector-native-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/dist/core-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/components/Register-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/manipulation-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/selector-sizzle-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/dist/jquery.slim.min-compiled.js" />
