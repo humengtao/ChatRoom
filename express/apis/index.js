@@ -1,9 +1,8 @@
 var router = require('express').Router();
-var mysql = require('mysql');
+var authController = require('../controllers/AuthController');
 
 router
-    .get('/', function(req, res, next) {
-         res.json({'name':'hello'});
-    })
+	.get('/', authController.index)
+
 
 module.exports = router;
