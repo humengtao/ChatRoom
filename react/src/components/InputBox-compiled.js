@@ -33,32 +33,16 @@ var InputBox = function (_React$Component) {
   function InputBox() {
     _classCallCheck(this, InputBox);
 
-    // init msg
-    var _this = _possibleConstructorReturn(this, (InputBox.__proto__ || Object.getPrototypeOf(InputBox)).call(this));
-
-    _this.state = {
-      msg: ''
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (InputBox.__proto__ || Object.getPrototypeOf(InputBox)).apply(this, arguments));
   }
 
   _createClass(InputBox, [{
     key: 'sendMsg',
     value: function sendMsg() {
       // emit event of send msg
-      var data = { msg: this.state.msg };
+      var data = { msg: this.textInput.value };
       _SocketAction2.default.send(data);
-      this.setState({
-        msg: ''
-      });
       this.textInput.value = '';
-    }
-  }, {
-    key: 'setMsg',
-    value: function setMsg(e) {
-      this.setState({
-        msg: e.target.value
-      });
     }
   }, {
     key: 'render',
@@ -68,7 +52,7 @@ var InputBox = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('textarea', { name: 'input', id: 'input', onChange: this.setMsg.bind(this), ref: function ref(input) {
+        _react2.default.createElement('textarea', { name: 'input', id: 'input', ref: function ref(input) {
             return _this2.textInput = input;
           }, placeholder: '请在这里输入内容' }),
         _react2.default.createElement(

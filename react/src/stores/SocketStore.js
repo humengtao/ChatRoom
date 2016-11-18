@@ -2,6 +2,7 @@ import reflux from 'reflux';
 import actions from '../actions/SocketAction';
 import io from 'socket.io-client';
 
+
 const Store = reflux.createStore({
   items: ['123'],
 
@@ -17,7 +18,7 @@ const Store = reflux.createStore({
   },
 
   onGet(){
-    this.trigger(this.items)
+    this.trigger(this.items);
   },
 
   onSend (data){

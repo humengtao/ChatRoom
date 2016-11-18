@@ -14,13 +14,9 @@ class MessageBox extends React.Component {
   constructor() {
     super();
     action.get();
-  }
-
-  componentWillMount() {
-    // dynamically set message box height
-    this.setState({
+    this.state={
       height: $(window).height() * 0.5
-    });
+    }
   }
 
   render() {

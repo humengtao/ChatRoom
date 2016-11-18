@@ -51,18 +51,13 @@ var MessageBox = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
 
     _SocketAction2.default.get();
+    _this.state = {
+      height: $(window).height() * 0.5
+    };
     return _this;
   }
 
   _createClass(MessageBox, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      // dynamically set message box height
-      this.setState({
-        height: $(window).height() * 0.5
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
