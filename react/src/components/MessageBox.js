@@ -22,8 +22,7 @@ class MessageBox extends React.Component {
   render() {
     if (!!this.state.store) {
       return (
-        <div className="message-box" id="message-box" style={{height: this.state.height}}
-             ref={(div) => this.msgBox = div}>
+        <div className="message-box" id="message-box" style={{height: this.state.height}}>
           {this.state.store.map((data, index)=> {
             if (!!data.msg)
               return <MessageUnit key={index.toString()} msg={data.msg}/>
@@ -32,8 +31,7 @@ class MessageBox extends React.Component {
       )
     }
     return (
-      <div className="message-box" id="message-box" style={{height: this.state.height}}
-           ref={(div) => this.msgBox = div}>
+      <div className="message-box" id="message-box" style={{height: this.state.height}}>
       </div>);
   }
 }

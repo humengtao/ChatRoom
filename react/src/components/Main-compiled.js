@@ -56,10 +56,18 @@ var AppComponent = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this));
 
     _LoginAction2.default.init();
+    setTimeout(function () {
+      console.log(_this.state);
+    }, 200);
     return _this;
   }
 
   _createClass(AppComponent, [{
+    key: 'logout',
+    value: function logout() {
+      _LoginAction2.default.logout();
+    }
+  }, {
     key: 'render',
     value: function render() {
       if (this.state.login) {
@@ -69,10 +77,20 @@ var AppComponent = function (_React$Component) {
           _react2.default.createElement(
             'h1',
             null,
+            this.state.login.username
+          ),
+          _react2.default.createElement(
+            'h1',
+            null,
             'ChatRoom'
           ),
           _react2.default.createElement(_MessageBox2.default, null),
-          _react2.default.createElement(_InputBox2.default, null)
+          _react2.default.createElement(_InputBox2.default, null),
+          _react2.default.createElement(
+            'button',
+            { onClick: this.logout.bind(this) },
+            'logout'
+          )
         );
       }
       return _react2.default.createElement(

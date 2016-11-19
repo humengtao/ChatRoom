@@ -7,17 +7,16 @@
 .register *{
   width: 100%;
 }
+.register a{
+  color: gold;
+}
 
 .register h1{
   text-align: center;
   color: goldenrod;
 }
 
-.register a{
-  color: gold;
-}
-
-.register input{
+.register input,.register button{
   font-size: 20px;
   height: 50px;
   margin: 20px 0;
@@ -25,14 +24,20 @@
   border:0;
 }
 
-.register input[type=submit]{
+.register button{
   background-color: #2e2e2e;
   color: goldenrod;
   border: 1px solid goldenrod;
   cursor: pointer;
 }
 
-.register input[type=submit]:hover{
+.register button:hover{
   background-color: #222222;
+}
+
+.register h2{
+  text-align: center;
+  color: firebrick;
+  font-weight: 900;
 }
 

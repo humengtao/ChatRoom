@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _LoginAction = require('../actions/LoginAction');
+
+var _LoginAction2 = _interopRequireDefault(_LoginAction);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25,6 +29,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 require('styles/Login.css');
 
+
+var $ = require('jquery');
+
 var Login = function (_React$Component) {
   _inherits(Login, _React$Component);
 
@@ -35,8 +42,18 @@ var Login = function (_React$Component) {
   }
 
   _createClass(Login, [{
+    key: 'login',
+    value: function login() {
+      _LoginAction2.default.login(this.username.value, this.password.value);
+    }
+  }, {
+    key: 'logout',
+    value: function logout() {}
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'login' },
@@ -45,34 +62,38 @@ var Login = function (_React$Component) {
           null,
           'Login'
         ),
+        'Username: ',
+        _react2.default.createElement('input', { type: 'text', name: 'name', ref: function ref(input) {
+            return _this2.username = input;
+          } }),
+        'Password: ',
+        _react2.default.createElement('input', { type: 'password', name: 'password', ref: function ref(input) {
+            return _this2.password = input;
+          } }),
         _react2.default.createElement(
-          'form',
-          { method: 'post', action: '' },
-          'Username: ',
-          _react2.default.createElement('input', { type: 'text', name: 'name' }),
-          'Password: ',
-          _react2.default.createElement('input', { type: 'password', name: 'password' }),
+          'p',
+          null,
+          ' 没有账号，',
           _react2.default.createElement(
-            'p',
-            null,
-            ' 没有账号，',
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/register' },
-              '去注册'
-            )
-          ),
+            _reactRouter.Link,
+            { to: '/register' },
+            '去注册'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          ' 现在不想登陆，',
           _react2.default.createElement(
-            'p',
-            null,
-            ' 现在不想登陆，',
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/' },
-              '返回首页'
-            )
-          ),
-          _react2.default.createElement('input', { type: 'submit', value: 'submit' })
+            _reactRouter.Link,
+            { to: '/' },
+            '返回首页'
+          )
+        ),
+        _react2.default.createElement(
+          'button',
+          { value: 'submit', onClick: this.login.bind(this) },
+          'Login'
         )
       );
     }

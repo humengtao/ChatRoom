@@ -16,7 +16,7 @@
   color: goldenrod;
 }
 
-.login input{
+.login input,.login button{
   font-size: 20px;
   height: 50px;
   margin: 20px 0;
@@ -24,14 +24,14 @@
   border:0;
 }
 
-.login input[type=submit]{
+.login button{
   background-color: #2e2e2e;
   color: goldenrod;
   border: 1px solid goldenrod;
   cursor: pointer;
 }
 
-.login input[type=submit]:hover{
+.login button:hover{
   background-color: #222222;
 }
 

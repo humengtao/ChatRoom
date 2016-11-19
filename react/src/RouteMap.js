@@ -26,8 +26,8 @@ class RouterMap extends React.Component {
       <div>
         <Router history={browserHistory}>
           <Route path="/" component={App}/>
-          <Route path="login" component={loginStore.login_state ? App : Login}/>
-          <Route path="register" component={loginStore.login_state ? App : Register}/>
+          <Route path="login" component={Login}/>
+          <Route path="register" component={Register}/>
         </Router>
       </div>
     )

@@ -73,8 +73,8 @@ var RouterMap = function (_React$Component) {
           _reactRouter.Router,
           { history: _reactRouter.browserHistory },
           _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Main2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _LoginStore2.default.login_state ? _Main2.default : _Login2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: 'register', component: _LoginStore2.default.login_state ? _Main2.default : _Register2.default })
+          _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: 'register', component: _Register2.default })
         )
       );
     }

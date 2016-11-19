@@ -6,11 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _reactRouter = require('react-router');
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = require('react-router');
+var _LoginAction = require('../actions/LoginAction');
+
+var _LoginAction2 = _interopRequireDefault(_LoginAction);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,7 +27,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /**
  * Created by humengtao on 2016/11/17.
  */
-require('styles/Register.css');
+require('styles/register.css');
+
+
+var $ = require('jquery');
 
 var Register = function (_React$Component) {
   _inherits(Register, _React$Component);
@@ -31,12 +38,45 @@ var Register = function (_React$Component) {
   function Register() {
     _classCallCheck(this, Register);
 
-    return _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this));
+
+    _this.state = {
+      errorMsg: ''
+    };
+    return _this;
   }
 
   _createClass(Register, [{
+    key: 'register',
+    value: function register() {
+      var _this2 = this;
+
+      $.ajax({
+        url: 'http://localhost:3000/register',
+        method: 'POST',
+        data: {
+          username: this.userInput.value,
+          password: this.passInput.value
+        },
+        success: function success() {
+          _reactRouter.browserHistory.push('/');
+        },
+        error: function error(data) {
+          var errMessage = data.responseText;
+          console.log(errMessage);
+          if (errMessage == 'wrongful') {
+            _this2.setState({ errMsg: '输入不合法' });
+          } else if (errMessage == 'exist') {
+            _this2.setState({ errMsg: '用户名已存在' });
+          }
+        }
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this3 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'register' },
@@ -46,20 +86,36 @@ var Register = function (_React$Component) {
           'Register'
         ),
         _react2.default.createElement(
-          'form',
-          { method: 'post', action: '' },
-          'Username: ',
-          _react2.default.createElement('input', { type: 'text', name: 'name' }),
-          'Password: ',
-          _react2.default.createElement('input', { type: 'password', name: 'password' }),
-          '已注册账号,',
+          'h2',
+          null,
+          !!this.state.errMsg ? this.state.errMsg : ''
+        ),
+        'Username: ',
+        _react2.default.createElement('input', { type: 'text', name: 'name', id: 'name', ref: function ref(input) {
+            return _this3.userInput = input;
+          } }),
+        'Password: ',
+        _react2.default.createElement('input', { type: 'password', name: 'password', id: 'password', ref: function ref(input) {
+            return _this3.passInput = input;
+          } }),
+        _react2.default.createElement(
+          'p',
+          null,
+          ' 已注册账号，',
           _react2.default.createElement(
             _reactRouter.Link,
             { to: '/login' },
-            '去登陆'
-          ),
-          _react2.default.createElement('input', { type: 'submit', value: 'submit' })
-        )
+            '登录'
+          )
+        ),
+        _react2.default.createElement(
+          'button',
+          { value: 'submit', onClick: this.register.bind(this) },
+          'register'
+        ),
+        _react2.default.createElement(_reactRouter.Link, { to: '/', ref: function ref(Link) {
+            return _this3.link = Link;
+          } })
       );
     }
   }]);

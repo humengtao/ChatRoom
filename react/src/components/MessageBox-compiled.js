@@ -60,24 +60,16 @@ var MessageBox = function (_React$Component) {
   _createClass(MessageBox, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       if (!!this.state.store) {
         return _react2.default.createElement(
           'div',
-          { className: 'message-box', id: 'message-box', style: { height: this.state.height },
-            ref: function ref(div) {
-              return _this2.msgBox = div;
-            } },
+          { className: 'message-box', id: 'message-box', style: { height: this.state.height } },
           this.state.store.map(function (data, index) {
             if (!!data.msg) return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg });
           })
         );
       }
-      return _react2.default.createElement('div', { className: 'message-box', id: 'message-box', style: { height: this.state.height },
-        ref: function ref(div) {
-          return _this2.msgBox = div;
-        } });
+      return _react2.default.createElement('div', { className: 'message-box', id: 'message-box', style: { height: this.state.height } });
     }
   }]);
 

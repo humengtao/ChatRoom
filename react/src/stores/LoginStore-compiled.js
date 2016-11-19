@@ -12,18 +12,75 @@ var _LoginAction = require('../actions/LoginAction');
 
 var _LoginAction2 = _interopRequireDefault(_LoginAction);
 
+var _reactRouter = require('react-router');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var $ = require('jquery');
+
 var LoginStore = _reflux2.default.createStore({
-  login_state: true,
+  login_state: false,
+
+  username: '',
 
   listenables: _LoginAction2.default,
 
   onInit: function onInit() {
-    this.trigger(this.login_state);
+    var _this = this;
+
+    $.ajax({
+      url: 'http://localhost:3000/login',
+      method: 'POST',
+      success: function success(data) {
+        _this.login_state = true;
+        _this.username = data.username;
+        _this.trigger({
+          login_state: _this.login_state,
+          username: _this.username
+        });
+      },
+      error: function error() {
+        _this.trigger('');
+      }
+    });
   },
-  onLogin: function onLogin() {},
-  onLogout: function onLogout() {}
+  onLogin: function onLogin(username, password) {
+    var _this2 = this;
+
+    $.ajax({
+      url: 'http://localhost:3000/login',
+      method: 'POST',
+      data: { username: username, password: password },
+      success: function success(data) {
+        _this2.login_state = true;
+        _this2.username = data.username;
+        _this2.trigger({
+          login_state: _this2.login_state,
+          username: _this2.username
+        });
+        _reactRouter.browserHistory.push('/');
+      },
+      error: function error() {
+        _this2.login_state = false;
+        _this2.trigger('');
+      }
+    });
+  },
+  onRegister: function onRegister(username, password) {},
+  onLogout: function onLogout() {
+    var _this3 = this;
+
+    $.ajax({
+      url: 'http://localhost:3000/logout',
+      method: 'GET',
+      success: function success() {
+        _this3.trigger('');
+      },
+      failed: function failed() {
+        alert('logout failed!');
+      }
+    });
+  }
 });
 
 exports.default = LoginStore;
