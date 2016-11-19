@@ -3,19 +3,23 @@ body {
   color: #fff;
   background: #222;
 }
-*{
+
+* {
   font-family: "Andale Mono";
 }
-.index{
+
+.index {
   width: 70%;
   height: 80%;
   margin: 5% auto;
   text-align: center;
   color: goldenrod;
 }
-a{
+
+a {
   color: gold;
 }
+
 .index img {
   margin: 40px auto;
   border-radius: 4px;
@@ -29,4 +33,33 @@ a{
   text-align: center;
   border: 1px solid #000;
   background: #666;
+}
+
+.index .welcome {
+  line-height: 50px;
+  position: absolute;
+  top: 30px;
+}
+
+.index .username{
+  color: gold;
+}
+
+.index .logout {
+  cursor: pointer;
+  padding: 7px;
+  position: relative;
+  left: 40px;
+  line-height: 50px;
+  width: 200px;
+  height: 50px;
+  border: 1px solid goldenrod;
+  color: goldenrod;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+}
+
+.index .logout:hover{
+  border-color: gold;
+  color:gold;
 }

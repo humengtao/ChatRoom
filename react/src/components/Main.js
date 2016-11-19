@@ -24,11 +24,10 @@ class AppComponent extends React.Component {
     if (this.state.login) {
       return (
         <div className="index">
-          <h1>{this.state.login.username}</h1>
+          <h1 className="welcome">Welcome to ChatRoom : <span className="username">{this.state.login.username}</span><span className="logout" onClick={this.logout.bind(this)}>退出</span></h1>
           <h1>ChatRoom</h1>
           <MessageBox/>
           <InputBox/>
-          <button onClick={this.logout.bind(this)}>logout</button>
         </div>
       );
     }

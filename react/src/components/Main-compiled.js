@@ -73,8 +73,18 @@ var AppComponent = function (_React$Component) {
           { className: 'index' },
           _react2.default.createElement(
             'h1',
-            null,
-            this.state.login.username
+            { className: 'welcome' },
+            'Welcome to ChatRoom : ',
+            _react2.default.createElement(
+              'span',
+              { className: 'username' },
+              this.state.login.username
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: 'logout', onClick: this.logout.bind(this) },
+              '退出'
+            )
           ),
           _react2.default.createElement(
             'h1',
@@ -82,12 +92,7 @@ var AppComponent = function (_React$Component) {
             'ChatRoom'
           ),
           _react2.default.createElement(_MessageBox2.default, null),
-          _react2.default.createElement(_InputBox2.default, null),
-          _react2.default.createElement(
-            'button',
-            { onClick: this.logout.bind(this) },
-            'logout'
-          )
+          _react2.default.createElement(_InputBox2.default, null)
         );
       }
       return _react2.default.createElement(
