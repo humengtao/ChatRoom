@@ -12,9 +12,21 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reflux = require('reflux');
+
+var _reflux2 = _interopRequireDefault(_reflux);
+
+var _reactMixin = require('react-mixin');
+
+var _reactMixin2 = _interopRequireDefault(_reactMixin);
+
 var _LoginAction = require('../actions/LoginAction');
 
 var _LoginAction2 = _interopRequireDefault(_LoginAction);
+
+var _LoginStore = require('../stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,16 +41,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 require('styles/Login.css');
 
-
-var $ = require('jquery');
-
 var Login = function (_React$Component) {
   _inherits(Login, _React$Component);
 
   function Login() {
     _classCallCheck(this, Login);
 
-    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this));
+
+    _LoginAction2.default.init();
+    return _this;
   }
 
   _createClass(Login, [{
@@ -47,60 +59,62 @@ var Login = function (_React$Component) {
       _LoginAction2.default.login(this.username.value, this.password.value);
     }
   }, {
-    key: 'logout',
-    value: function logout() {}
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
-      return _react2.default.createElement(
-        'div',
-        { className: 'login' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Login'
-        ),
-        'Username: ',
-        _react2.default.createElement('input', { type: 'text', name: 'name', ref: function ref(input) {
-            return _this2.username = input;
-          } }),
-        'Password: ',
-        _react2.default.createElement('input', { type: 'password', name: 'password', ref: function ref(input) {
-            return _this2.password = input;
-          } }),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' 没有账号，',
+      if (!this.state.login) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'login' },
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/register' },
-            '去注册'
-          )
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' 现在不想登陆，',
+            'h1',
+            null,
+            'Login'
+          ),
+          'Username: ',
+          _react2.default.createElement('input', { type: 'text', name: 'name', ref: function ref(input) {
+              return _this2.username = input;
+            } }),
+          'Password: ',
+          _react2.default.createElement('input', { type: 'password', name: 'password', ref: function ref(input) {
+              return _this2.password = input;
+            } }),
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/' },
-            '返回首页'
+            'p',
+            null,
+            ' 没有账号，',
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/register' },
+              '去注册'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            ' 现在不想登陆，',
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/' },
+              '返回首页'
+            )
+          ),
+          _react2.default.createElement(
+            'button',
+            { value: 'submit', onClick: this.login.bind(this) },
+            'Login'
           )
-        ),
-        _react2.default.createElement(
-          'button',
-          { value: 'submit', onClick: this.login.bind(this) },
-          'Login'
-        )
-      );
+        );
+      }
+      return null;
     }
   }]);
 
   return Login;
 }(_react2.default.Component);
+
+_reactMixin2.default.onClass(Login, _reflux2.default.connect(_LoginStore2.default, 'login'));
 
 exports.default = Login;
 

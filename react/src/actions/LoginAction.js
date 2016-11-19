@@ -3,7 +3,9 @@ import Reflux from 'reflux';
 const LoginAction = Reflux.createActions([
   'init',
   'login',
-  'logout'
+  'register',
+  'logout',
+  'registererror'
 ]);
 
 export default LoginAction;

@@ -12,9 +12,21 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reflux = require('reflux');
+
+var _reflux2 = _interopRequireDefault(_reflux);
+
+var _reactMixin = require('react-mixin');
+
+var _reactMixin2 = _interopRequireDefault(_reactMixin);
+
 var _LoginAction = require('../actions/LoginAction');
 
 var _LoginAction2 = _interopRequireDefault(_LoginAction);
+
+var _LoginStore = require('../stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,9 +41,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  */
 require('styles/register.css');
 
-
-var $ = require('jquery');
-
 var Register = function (_React$Component) {
   _inherits(Register, _React$Component);
 
@@ -40,88 +49,70 @@ var Register = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this));
 
-    _this.state = {
-      errorMsg: ''
-    };
+    _LoginAction2.default.registererror();
     return _this;
   }
 
   _createClass(Register, [{
     key: 'register',
     value: function register() {
-      var _this2 = this;
-
-      $.ajax({
-        url: 'http://localhost:3000/register',
-        method: 'POST',
-        data: {
-          username: this.userInput.value,
-          password: this.passInput.value
-        },
-        success: function success() {
-          _reactRouter.browserHistory.push('/');
-        },
-        error: function error(data) {
-          var errMessage = data.responseText;
-          console.log(errMessage);
-          if (errMessage == 'wrongful') {
-            _this2.setState({ errMsg: '输入不合法' });
-          } else if (errMessage == 'exist') {
-            _this2.setState({ errMsg: '用户名已存在' });
-          }
-        }
-      });
+      _LoginAction2.default.register(this.userInput.value, this.passInput.value);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
-      return _react2.default.createElement(
-        'div',
-        { className: 'register' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Register'
-        ),
-        _react2.default.createElement(
-          'h2',
-          null,
-          !!this.state.errMsg ? this.state.errMsg : ''
-        ),
-        'Username: ',
-        _react2.default.createElement('input', { type: 'text', name: 'name', id: 'name', ref: function ref(input) {
-            return _this3.userInput = input;
-          } }),
-        'Password: ',
-        _react2.default.createElement('input', { type: 'password', name: 'password', id: 'password', ref: function ref(input) {
-            return _this3.passInput = input;
-          } }),
-        _react2.default.createElement(
-          'p',
-          null,
-          ' 已注册账号，',
+      if (this.state.register) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'register' },
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/login' },
-            '登录'
-          )
-        ),
-        _react2.default.createElement(
-          'button',
-          { value: 'submit', onClick: this.register.bind(this) },
-          'register'
-        ),
-        _react2.default.createElement(_reactRouter.Link, { to: '/', ref: function ref(Link) {
-            return _this3.link = Link;
-          } })
-      );
+            'h1',
+            null,
+            'Register'
+          ),
+          _react2.default.createElement(
+            'h2',
+            null,
+            !!this.state.register.errMsg ? this.state.register.errMsg : ''
+          ),
+          'Username: ',
+          _react2.default.createElement('input', { type: 'text', name: 'name', id: 'name', ref: function ref(input) {
+              return _this2.userInput = input;
+            } }),
+          'Password: ',
+          _react2.default.createElement('input', { type: 'password', name: 'password', id: 'password', ref: function ref(input) {
+              return _this2.passInput = input;
+            } }),
+          _react2.default.createElement(
+            'p',
+            null,
+            ' 已注册账号，',
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/login' },
+              '登录'
+            )
+          ),
+          _react2.default.createElement(
+            'button',
+            { value: 'submit', onClick: this.register.bind(this) },
+            'register'
+          ),
+          _react2.default.createElement(_reactRouter.Link, { to: '/', ref: function ref(Link) {
+              return _this2.link = Link;
+            } })
+        );
+      }
+      return _react2.default.createElement('div', null);
     }
   }]);
 
   return Register;
 }(_react2.default.Component);
+
+_reactMixin2.default.onClass(Register, _reflux2.default.connect(_LoginStore2.default, 'register'));
 
 exports.default = Register;
 

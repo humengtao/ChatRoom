@@ -9,6 +9,10 @@ const LoginStore = reflux.createStore({
 
   username: '',
 
+  login_error_msg: '',
+
+  register_error_msg: '',
+
   listenables: actions,
 
   onInit(){
@@ -50,8 +54,26 @@ const LoginStore = reflux.createStore({
     });
   },
 
-  onRegister(username,password){
-
+  onRegister(username, password){
+    $.ajax({
+      url: 'http://localhost:3000/register',
+      method: 'POST',
+      data: {
+        username: username,
+        password: password
+      },
+      success: ()=> {
+        browserHistory.push('/')
+      },
+      error: (data)=> {
+        var errMessage = data.responseText;
+        if (errMessage == 'wrongful') {
+          this.trigger({errMsg: '输入不合法'})
+        } else if (errMessage == 'exist') {
+          this.trigger({errMsg: '用户名已存在'})
+        }
+      }
+    });
   },
 
   onLogout (){
@@ -65,6 +87,10 @@ const LoginStore = reflux.createStore({
         alert('logout failed!');
       }
     });
+  },
+
+  onRegistererror (){
+     this.trigger({errMsg:''});
   }
 
 });

@@ -10,7 +10,7 @@ var _reflux2 = _interopRequireDefault(_reflux);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var LoginAction = _reflux2.default.createActions(['init', 'login', 'logout']);
+var LoginAction = _reflux2.default.createActions(['init', 'login', 'register', 'logout', 'registererror']);
 
 exports.default = LoginAction;
 

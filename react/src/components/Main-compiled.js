@@ -56,9 +56,6 @@ var AppComponent = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this));
 
     _LoginAction2.default.init();
-    setTimeout(function () {
-      console.log(_this.state);
-    }, 200);
     return _this;
   }
 

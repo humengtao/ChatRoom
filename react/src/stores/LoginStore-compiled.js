@@ -23,6 +23,10 @@ var LoginStore = _reflux2.default.createStore({
 
   username: '',
 
+  login_error_msg: '',
+
+  register_error_msg: '',
+
   listenables: _LoginAction2.default,
 
   onInit: function onInit() {
@@ -66,20 +70,45 @@ var LoginStore = _reflux2.default.createStore({
       }
     });
   },
-  onRegister: function onRegister(username, password) {},
-  onLogout: function onLogout() {
+  onRegister: function onRegister(username, password) {
     var _this3 = this;
+
+    $.ajax({
+      url: 'http://localhost:3000/register',
+      method: 'POST',
+      data: {
+        username: username,
+        password: password
+      },
+      success: function success() {
+        _reactRouter.browserHistory.push('/');
+      },
+      error: function error(data) {
+        var errMessage = data.responseText;
+        if (errMessage == 'wrongful') {
+          _this3.trigger({ errMsg: '输入不合法' });
+        } else if (errMessage == 'exist') {
+          _this3.trigger({ errMsg: '用户名已存在' });
+        }
+      }
+    });
+  },
+  onLogout: function onLogout() {
+    var _this4 = this;
 
     $.ajax({
       url: 'http://localhost:3000/logout',
       method: 'GET',
       success: function success() {
-        _this3.trigger('');
+        _this4.trigger('');
       },
       failed: function failed() {
         alert('logout failed!');
       }
     });
+  },
+  onRegistererror: function onRegistererror() {
+    this.trigger({ errMsg: '' });
   }
 });
 

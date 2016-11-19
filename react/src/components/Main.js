@@ -7,20 +7,17 @@ import InputBox from './InputBox';
 import {Link} from 'react-router';
 import Reflux from 'reflux';
 import ReactMixin from 'react-mixin';
-import loginAction from '../actions/LoginAction';
-import loginStore from '../stores/LoginStore';
+import login_action from '../actions/LoginAction';
+import login_store from '../stores/LoginStore';
 
 class AppComponent extends React.Component {
   constructor() {
     super();
-    loginAction.init();
-    setTimeout(()=>{
-      console.log(this.state);
-    },200);
+    login_action.init();
   }
 
   logout() {
-    loginAction.logout();
+    login_action.logout();
   }
 
   render() {
@@ -48,6 +45,6 @@ class AppComponent extends React.Component {
 
 AppComponent.defaultProps = {};
 
-ReactMixin.onClass(AppComponent, Reflux.connect(loginStore, 'login'));
+ReactMixin.onClass(AppComponent, Reflux.connect(login_store, 'login'));
 
 export default AppComponent;

@@ -2,56 +2,41 @@
  * Created by humengtao on 2016/11/17.
  */
 require('styles/register.css');
-import {Link, browserHistory} from 'react-router';
+import {Link} from 'react-router';
 import React from 'react';
+import Reflux from 'reflux';
+import ReactMixin from 'react-mixin';
 import login_action from '../actions/LoginAction';
-
-let $ = require('jquery');
+import login_store from '../stores/LoginStore';
 
 class Register extends React.Component {
   constructor() {
     super();
-    this.state = {
-      errorMsg: ''
-    }
+    login_action.registererror();
   }
 
   register() {
-    $.ajax({
-      url: 'http://localhost:3000/register',
-      method: 'POST',
-      data: {
-        username: this.userInput.value,
-        password: this.passInput.value
-      },
-      success: ()=> {
-        browserHistory.push('/')
-      },
-      error: (data)=> {
-        var errMessage = data.responseText;
-        console.log(errMessage);
-        if (errMessage == 'wrongful') {
-          this.setState({errMsg: '输入不合法'})
-        } else if (errMessage == 'exist') {
-          this.setState({errMsg: '用户名已存在'})
-        }
-      }
-    });
+    login_action.register(this.userInput.value, this.passInput.value);
   }
 
   render() {
-    return (
-      <div className="register">
-        <h1>Register</h1>
-        <h2>{!!this.state.errMsg ? this.state.errMsg : ''}</h2>
-        Username: <input type="text" name="name" id="name" ref={(input) => this.userInput = input}/>
-        Password: <input type="password" name="password" id="password" ref={(input) => this.passInput = input}/>
-        <p> 已注册账号，<Link to="/login">登录</Link></p>
-        <button value="submit" onClick={this.register.bind(this)}>register</button>
-        <Link to="/" ref={(Link)=> this.link = Link}/>
-      </div>
-    );
+    if (this.state.register) {
+      return (
+        <div className="register">
+          <h1>Register</h1>
+          <h2>{!!this.state.register.errMsg ? this.state.register.errMsg : ''}</h2>
+          Username: <input type="text" name="name" id="name" ref={(input) => this.userInput = input}/>
+          Password: <input type="password" name="password" id="password" ref={(input) => this.passInput = input}/>
+          <p> 已注册账号，<Link to="/login">登录</Link></p>
+          <button value="submit" onClick={this.register.bind(this)}>register</button>
+          <Link to="/" ref={(Link)=> this.link = Link}/>
+        </div>
+      )
+    }
+    return (<div></div>)
   }
 }
+
+ReactMixin.onClass(Register, Reflux.connect(login_store, 'register'));
 
 export default Register;
