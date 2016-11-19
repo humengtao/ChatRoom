@@ -24,6 +24,22 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reflux = require('reflux');
+
+var _reflux2 = _interopRequireDefault(_reflux);
+
+var _reactMixin = require('react-mixin');
+
+var _reactMixin2 = _interopRequireDefault(_reactMixin);
+
+var _SocketAction = require('./actions/SocketAction');
+
+var _SocketAction2 = _interopRequireDefault(_SocketAction);
+
+var _LoginStore = require('./stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41,7 +57,10 @@ var RouterMap = function (_React$Component) {
   function RouterMap() {
     _classCallCheck(this, RouterMap);
 
-    return _possibleConstructorReturn(this, (RouterMap.__proto__ || Object.getPrototypeOf(RouterMap)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (RouterMap.__proto__ || Object.getPrototypeOf(RouterMap)).call(this));
+
+    _SocketAction2.default.socket();
+    return _this;
   }
 
   _createClass(RouterMap, [{
@@ -54,8 +73,8 @@ var RouterMap = function (_React$Component) {
           _reactRouter.Router,
           { history: _reactRouter.browserHistory },
           _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Main2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _Login2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: 'register', component: _Register2.default })
+          _react2.default.createElement(_reactRouter.Route, { path: 'login', component: _LoginStore2.default.login_state ? _Main2.default : _Login2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: 'register', component: _LoginStore2.default.login_state ? _Main2.default : _Register2.default })
         )
       );
     }
@@ -63,6 +82,8 @@ var RouterMap = function (_React$Component) {
 
   return RouterMap;
 }(_react2.default.Component);
+
+_reactMixin2.default.onClass(RouterMap, _reflux2.default.connect(_LoginStore2.default, 'login'));
 
 exports.default = RouterMap;
 

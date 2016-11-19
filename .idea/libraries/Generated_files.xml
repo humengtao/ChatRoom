@@ -50,8 +50,10 @@
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/support-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/parseHTML-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/src/components/Main-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/live-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/ready-no-deferred-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/data/var/acceptData-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/data/var/dataUser-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" />
@@ -78,8 +80,8 @@
         <item url="file://$PROJECT_DIR$/react/src/RouteMap-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/event-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/src/components/Nav-compiled.js" />
-        <item url="file://$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/wrap-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/src/Route-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/queue-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/src/actions/SocketAction-compiled.js" />
@@ -174,8 +176,10 @@
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/support-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/parseHTML-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/src/components/Main-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/live-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/core/ready-no-deferred-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/data/var/acceptData-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/data/var/dataUser-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" />
@@ -202,8 +206,8 @@
       <root url="file://$PROJECT_DIR$/react/src/RouteMap-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/event-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/src/components/Nav-compiled.js" />
-      <root url="file://$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/wrap-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/src/Route-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/queue-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/src/actions/SocketAction-compiled.js" />

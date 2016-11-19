@@ -20,9 +20,21 @@ var _InputBox2 = _interopRequireDefault(_InputBox);
 
 var _reactRouter = require('react-router');
 
-var _SocketAction = require('../actions/SocketAction');
+var _reflux = require('reflux');
 
-var _SocketAction2 = _interopRequireDefault(_SocketAction);
+var _reflux2 = _interopRequireDefault(_reflux);
+
+var _reactMixin = require('react-mixin');
+
+var _reactMixin2 = _interopRequireDefault(_reactMixin);
+
+var _LoginAction = require('../actions/LoginAction');
+
+var _LoginAction2 = _interopRequireDefault(_LoginAction);
+
+var _LoginStore = require('../stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43,13 +55,26 @@ var AppComponent = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this));
 
-    _SocketAction2.default.socket();
+    _LoginAction2.default.init();
     return _this;
   }
 
   _createClass(AppComponent, [{
     key: 'render',
     value: function render() {
+      if (this.state.login) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'index' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'ChatRoom'
+          ),
+          _react2.default.createElement(_MessageBox2.default, null),
+          _react2.default.createElement(_InputBox2.default, null)
+        );
+      }
       return _react2.default.createElement(
         'div',
         { className: 'index' },
@@ -83,6 +108,8 @@ var AppComponent = function (_React$Component) {
 }(_react2.default.Component);
 
 AppComponent.defaultProps = {};
+
+_reactMixin2.default.onClass(AppComponent, _reflux2.default.connect(_LoginStore2.default, 'login'));
 
 exports.default = AppComponent;
 
