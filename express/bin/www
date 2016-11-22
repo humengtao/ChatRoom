@@ -31,7 +31,9 @@ var io = require('socket.io')(server);
  **/
 
 io.on('connection', (socket) => {
-  console.log('a new user connected');
+  socket.on('client:user-coming',(data)=>{
+    io.emit('server:user-coming');
+  });
   io.emit('server:connection', 'you have been connected to 3000');
   socket.on('client:send',function(data){
     console.log(data);

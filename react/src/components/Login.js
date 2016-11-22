@@ -20,7 +20,7 @@ class Login extends React.Component {
   }
 
   render() {
-    if (!this.state.login) {
+    if (!login_store.login_state) {
       return (
         <div className="login">
           <h1>Login</h1>

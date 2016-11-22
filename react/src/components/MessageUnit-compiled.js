@@ -35,10 +35,55 @@ var MessageUnit = function (_React$Component) {
   _createClass(MessageUnit, [{
     key: 'render',
     value: function render() {
+      if (this.props.align == 'left') {
+        return _react2.default.createElement(
+          'div',
+          { className: 'message-unit', style: { textAlign: 'left' } },
+          _react2.default.createElement(
+            'h6',
+            { className: 'line' },
+            _react2.default.createElement(
+              'span',
+              null,
+              'Oct.13 13:12'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'span',
+              null,
+              _react2.default.createElement('img', { src: 'images/avatar.jpg', style: { float: 'left' } }),
+              ': ',
+              this.props.msg
+            )
+          )
+        );
+      }
       return _react2.default.createElement(
         'div',
-        { className: 'message-unit' },
-        this.props.msg
+        { className: 'message-unit', style: { textAlign: 'right' } },
+        _react2.default.createElement(
+          'h6',
+          { className: 'line' },
+          _react2.default.createElement(
+            'span',
+            null,
+            'Oct.13 13:12'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          _react2.default.createElement(
+            'span',
+            null,
+            this.props.msg,
+            ' : ',
+            _react2.default.createElement('img', { src: 'images/avatar.jpg' })
+          )
+        )
       );
     }
   }]);

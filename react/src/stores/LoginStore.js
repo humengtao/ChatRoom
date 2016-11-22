@@ -22,13 +22,11 @@ const LoginStore = reflux.createStore({
       success: (data)=> {
         this.login_state = true;
         this.username = data.username;
-        this.trigger({
-          login_state: this.login_state,
-          username: this.username
-        });
+        actions.triggerall();
       },
       error: ()=> {
-        this.trigger('');
+        this.username='(游客)CR-'+(~~(Math.random(1)*10e9));
+        actions.triggerall();
       }
     });
   },
@@ -41,15 +39,12 @@ const LoginStore = reflux.createStore({
       success: (data)=> {
         this.login_state = true;
         this.username = data.username;
-        this.trigger({
-          login_state: this.login_state,
-          username: this.username
-        });
+        actions.triggerall();
         browserHistory.push('/')
       },
       error: ()=> {
         this.login_state = false;
-        this.trigger('');
+        actions.triggerall();
       }
     });
   },
@@ -81,7 +76,9 @@ const LoginStore = reflux.createStore({
       url: 'http://localhost:3000/logout',
       method: 'GET',
       success: ()=> {
-        this.trigger('');
+        this.login_state=false;
+        this.username='(游客)CR-'+(~~(Math.random(1)*10e9));
+        actions.triggerall();
       },
       failed: ()=> {
         alert('logout failed!');
@@ -91,6 +88,13 @@ const LoginStore = reflux.createStore({
 
   onRegistererror (){
      this.trigger({errMsg:''});
+  },
+
+  onTriggerall(){
+    this.trigger({
+      login_state:this.login_state,
+      username:this.username
+    });
   }
 
 });

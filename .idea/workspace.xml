@@ -2,11 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74a72513-b085-4af2-b905-b4d120e1137a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/react/src/images/avatar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/react/src/styles/UserList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/express/apis/users.js" afterPath="$PROJECT_DIR$/express/apis/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/express/bin/www" afterPath="$PROJECT_DIR$/express/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/express/controllers/AuthController.js" afterPath="$PROJECT_DIR$/express/controllers/AuthController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/express/controllers/UserController.js" afterPath="$PROJECT_DIR$/express/controllers/UserController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js" afterPath="$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/actions/LoginAction-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/actions/LoginAction.js" afterPath="$PROJECT_DIR$/react/src/actions/LoginAction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/InputBox-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/InputBox.js" afterPath="$PROJECT_DIR$/react/src/components/InputBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Login-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/Login-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Login-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/Login-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Login.js" afterPath="$PROJECT_DIR$/react/src/components/Login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/Main-compiled.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/Main-compiled.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/Main.js" afterPath="$PROJECT_DIR$/react/src/components/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/MessageBox-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageBox.js" afterPath="$PROJECT_DIR$/react/src/components/MessageBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/components/MessageUnit.js" afterPath="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js" afterPath="$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/stores/LoginStore-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/LoginStore.js" afterPath="$PROJECT_DIR$/react/src/stores/LoginStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" afterPath="$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js.map" afterPath="$PROJECT_DIR$/react/src/stores/SocketStore-compiled.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/stores/SocketStore.js" afterPath="$PROJECT_DIR$/react/src/stores/SocketStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/styles/App.css" afterPath="$PROJECT_DIR$/react/src/styles/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/src/styles/MessageUnit.css" afterPath="$PROJECT_DIR$/react/src/styles/MessageUnit.css" />
     </list>
     <ignored path="ChatRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,36 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/react/src/components/Main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-              <folding>
-                <element signature="e#68#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/src/components/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-                <element signature="e#76#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/src/components/Register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="210">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -70,14 +75,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginStore.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginStore.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react/src/stores/LoginStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="93" column="3" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
+            <state relative-caret-position="-1053">
+              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express/apis/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1173">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1479718702000" expanded="true" signature="701:767" ph="{...}" />
+                <marker date="1479718702000" expanded="true" signature="807:850" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express/controllers/AuthController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+              <folding>
+                <marker date="1479719778000" expanded="true" signature="1241:1265" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/express/controllers/UserController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,40 +133,40 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/src/styles/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="165">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/src/index.js">
+      <file leaf-file-name="UserList.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/src/styles/UserList.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="15">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RouteMap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/src/RouteMap.js">
+      <file leaf-file-name="SocketStore.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/src/stores/SocketStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <element signature="e#47#106#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/src/styles/Login.css">
+      <file leaf-file-name="LoginAction.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/src/actions/LoginAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -129,8 +177,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -143,9 +191,7 @@
         <option value="$PROJECT_DIR$/react/karma.conf.js" />
         <option value="$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/style.css" />
         <option value="$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/live.js" />
-        <option value="$PROJECT_DIR$/react/src/styles/MessageUnit.css" />
         <option value="$PROJECT_DIR$/react/src/styles/MessageBox.css" />
-        <option value="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
         <option value="$PROJECT_DIR$/react/src/styles/InputBox.css" />
         <option value="$PROJECT_DIR$/react/src/Route.js" />
         <option value="$PROJECT_DIR$/react/src/index.html" />
@@ -155,18 +201,23 @@
         <option value="$PROJECT_DIR$/react/src/components/Nav.js" />
         <option value="$PROJECT_DIR$/react/src/actions/SocketMsg.js" />
         <option value="$PROJECT_DIR$/react/src/actions/SocketAction.js" />
-        <option value="$PROJECT_DIR$/react/src/stores/SocketStore.js" />
-        <option value="$PROJECT_DIR$/react/src/components/InputBox.js" />
         <option value="$PROJECT_DIR$/react/src/styles/Login.css" />
-        <option value="$PROJECT_DIR$/react/src/components/MessageBox.js" />
         <option value="$PROJECT_DIR$/react/src/styles/Register.css" />
-        <option value="$PROJECT_DIR$/react/src/actions/LoginAction.js" />
         <option value="$PROJECT_DIR$/react/src/RouteMap.js" />
-        <option value="$PROJECT_DIR$/react/src/components/Login.js" />
         <option value="$PROJECT_DIR$/react/src/components/Register.js" />
-        <option value="$PROJECT_DIR$/react/src/stores/LoginStore.js" />
+        <option value="$PROJECT_DIR$/react/src/actions/LoginAction.js" />
+        <option value="$PROJECT_DIR$/react/src/components/InputBox.js" />
+        <option value="$PROJECT_DIR$/react/src/styles/MessageUnit.css" />
+        <option value="$PROJECT_DIR$/react/src/components/MessageBox.js" />
+        <option value="$PROJECT_DIR$/react/src/components/MessageUnit.js" />
         <option value="$PROJECT_DIR$/react/src/components/Main.js" />
+        <option value="$PROJECT_DIR$/react/src/components/UserList.js" />
         <option value="$PROJECT_DIR$/react/src/styles/App.css" />
+        <option value="$PROJECT_DIR$/react/src/styles/UserList.css" />
+        <option value="$PROJECT_DIR$/react/src/stores/LoginStore.js" />
+        <option value="$PROJECT_DIR$/express/controllers/UserController.js" />
+        <option value="$PROJECT_DIR$/react/src/stores/SocketStore.js" />
+        <option value="$PROJECT_DIR$/react/src/components/Login.js" />
       </list>
     </option>
   </component>
@@ -210,7 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,6 +373,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -349,9 +421,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,12 +508,12 @@
     <property name="editor.config.accepted" value="true" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/react/node_modules/mocha" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="R&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;re&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/Register.css&#10;regis&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;register&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;store&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/stores/LoginStore.js&#10;browe&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/node_modules/mocha/browser-entry.js&#10;Main&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Main.js&#10;In&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/InputBox.js&#10;Rou&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/RouteMap.js&#10;st&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/stores/SocketStore.js&#10;Route&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/RouteMap.js&#10;App&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/App.css&#10;Login&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Login.js&#10;Regis&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/Register.css&#10;index&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/index.html&#10;ind&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/index.js&#10;app&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/App.css&#10;messa&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/MessageUnit.js&#10;mess&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/MessageBox.css&#10;login&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Login.js&#10;live&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/node_modules/webpack-dev-server/client/live.js" />
+    <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Login.js&#10;Login&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/stores/LoginStore.js&#10;loader&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/node_modules/css-loader/lib/loader.js&#10;Main&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Main.js&#10;user&#9;null&#9;null&#10;Mess&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/MessageUnit.js&#10;Inp&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/InputBox.js&#10;Route&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/RouteMap.js&#10;LoginA&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/actions/LoginAction.js&#10;R&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;re&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/Register.css&#10;regis&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;register&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/Register.js&#10;store&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/stores/LoginStore.js&#10;browe&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/node_modules/mocha/browser-entry.js&#10;In&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/InputBox.js&#10;Rou&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/RouteMap.js&#10;st&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/stores/SocketStore.js&#10;App&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/App.css&#10;Regis&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/Register.css&#10;index&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/index.html&#10;ind&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/index.js&#10;app&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/App.css&#10;messa&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/components/MessageUnit.js&#10;mess&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/src/styles/MessageBox.css&#10;live&#9;FILE&#9;file:///Users/humengtao/Desktop/ChatRoom/react/node_modules/webpack-dev-server/client/live.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/react/src/styles" />
       <recent name="$PROJECT_DIR$/react/src/images" />
+      <recent name="$PROJECT_DIR$/react/src/styles" />
     </key>
   </component>
   <component name="RunManager">
@@ -451,14 +592,15 @@
       <workItem from="1479387451994" duration="12099000" />
       <workItem from="1479533015793" duration="25635000" />
       <workItem from="1479571618067" duration="1157000" />
+      <workItem from="1479691278811" duration="10587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76684000" />
+    <option name="totallyTimeSpent" value="87271000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="957" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -515,69 +657,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/react/node_modules/pako/lib/zlib/deflate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1785" column="38" selection-start-line="1785" selection-start-column="38" selection-end-line="1785" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/page.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/node_modules/strip-ansi/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/node_modules/webpack-dev-server/client/live.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/test/components/MainTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -586,35 +665,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/.yo-rc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -646,21 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageUnit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageBox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/Route.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
@@ -670,19 +705,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/Boot.css" />
     <entry file="file://$PROJECT_DIR$/react/src/styles/Nav.css" />
     <entry file="file://$PROJECT_DIR$/react/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="109" selection-start-line="7" selection-start-column="109" selection-end-line="7" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/components/MessageUnit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -721,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/components/Nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -740,13 +760,6 @@
         <state relative-caret-position="90">
           <caret line="6" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/stores/SocketStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -773,17 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/components/InputBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-            <element signature="e#80#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/styles/Register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -792,44 +794,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/express/controllers/AuthController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/actions/LoginAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/components/MessageBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/RouteMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#47#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,10 +812,226 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/stores/LoginStore.js">
+    <entry file="file://$PROJECT_DIR$/react/src/components/InputBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="93" column="3" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
+        <state relative-caret-position="150">
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+            <element signature="e#80#106#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/RouteMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="e#47#106#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/MessageBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#68#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageUnit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/MessageBox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/node_modules/css-loader/lib/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/MessageUnit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="302" column="4" selection-start-line="302" selection-start-column="4" selection-end-line="302" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.4.0/core-modules/path.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-381">
+          <caret line="1130" column="6" selection-start-line="1130" selection-start-column="6" selection-end-line="1130" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/.yo-rc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/components/UserList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/Boot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/styles/UserList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/actions/LoginAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/apis/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1479718702000" expanded="true" signature="701:767" ph="{...}" />
+            <marker date="1479718702000" expanded="true" signature="807:850" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/controllers/AuthController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding>
+            <marker date="1479719778000" expanded="true" signature="1241:1265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/express/controllers/UserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/src/stores/SocketStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -855,30 +1040,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/src/components/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
-            <element signature="e#76#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/styles/App.css">
+    <entry file="file://$PROJECT_DIR$/react/src/stores/LoginStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="-1053">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/src/components/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="e#68#94#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

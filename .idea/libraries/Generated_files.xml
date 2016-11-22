@@ -24,6 +24,7 @@
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/document-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/support-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/indexOf-compiled.js" />
+        <item url="file://$PROJECT_DIR$/react/src/components/UserList-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/rcssNum-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/rnothtmlwhite-compiled.js" />
         <item url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/class2type-compiled.js" />
@@ -150,6 +151,7 @@
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/document-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/support-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/indexOf-compiled.js" />
+      <root url="file://$PROJECT_DIR$/react/src/components/UserList-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/rcssNum-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/rnothtmlwhite-compiled.js" />
       <root url="file://$PROJECT_DIR$/react/node_modules/jquery/src/var/class2type-compiled.js" />

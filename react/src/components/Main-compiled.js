@@ -18,6 +18,10 @@ var _InputBox = require('./InputBox');
 
 var _InputBox2 = _interopRequireDefault(_InputBox);
 
+var _UserList = require('./UserList');
+
+var _UserList2 = _interopRequireDefault(_UserList);
+
 var _reactRouter = require('react-router');
 
 var _reflux = require('reflux');
@@ -68,6 +72,37 @@ var AppComponent = function (_React$Component) {
     key: 'render',
     value: function render() {
       if (this.state.login) {
+        if (this.state.login.login_state == true) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'index' },
+            _react2.default.createElement(
+              'h1',
+              { className: 'welcome' },
+              'Welcome to ChatRoom : ',
+              _react2.default.createElement(
+                'span',
+                {
+                  className: 'username' },
+                this.state.login.username
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'logout',
+                  onClick: this.logout.bind(this) },
+                '退出'
+              )
+            ),
+            _react2.default.createElement(
+              'h1',
+              null,
+              'ChatRoom'
+            ),
+            _react2.default.createElement(_MessageBox2.default, null),
+            _react2.default.createElement(_InputBox2.default, null),
+            _react2.default.createElement(_UserList2.default, null)
+          );
+        }
         return _react2.default.createElement(
           'div',
           { className: 'index' },
@@ -77,13 +112,9 @@ var AppComponent = function (_React$Component) {
             'Welcome to ChatRoom : ',
             _react2.default.createElement(
               'span',
-              { className: 'username' },
+              {
+                className: 'username' },
               this.state.login.username
-            ),
-            _react2.default.createElement(
-              'span',
-              { className: 'logout', onClick: this.logout.bind(this) },
-              '退出'
             )
           ),
           _react2.default.createElement(
@@ -92,35 +123,25 @@ var AppComponent = function (_React$Component) {
             'ChatRoom'
           ),
           _react2.default.createElement(_MessageBox2.default, null),
-          _react2.default.createElement(_InputBox2.default, null)
-        );
-      }
-      return _react2.default.createElement(
-        'div',
-        { className: 'index' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'ChatRoom'
-        ),
-        _react2.default.createElement(_MessageBox2.default, null),
-        _react2.default.createElement(_InputBox2.default, null),
-        _react2.default.createElement(
-          'h3',
-          null,
+          _react2.default.createElement(_InputBox2.default, null),
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/login' },
-            '登录'
+            'h3',
+            null,
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/login' },
+              '登录'
+            ),
+            ' ',
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/register' },
+              '注册'
+            )
           ),
-          ' ',
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/register' },
-            '注册'
-          )
-        )
-      );
+          _react2.default.createElement(_UserList2.default, null)
+        );
+      } else return null;
     }
   }]);
 

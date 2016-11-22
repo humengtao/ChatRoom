@@ -1,11 +1,36 @@
-.message-unit{
+.message-unit p span{
   background-color: #2e2e2e;
   color: goldenrod;
-  display: table;
-  padding:10px;
-  margin:20px 30px;
-  font-size: 28px;
+  padding:20px;
+  margin:0 30px;
+  font-size: 18px;
   font-family: serif;
   border-radius: 5px;
+  line-height: 30px;
+  display: inline-block;
+}
+
+.message-unit p span img{
+  margin: 0 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  float: right;
+}
+
+.message-unit{
+  margin-top:30px;
+}
+
+.message-unit h6{
+  line-height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.message-unit span{
+  position: relative;
+  top: 10px;
+  background-color: #fafafa;
 }
 

@@ -5,14 +5,14 @@ require('styles/InputBox.css');
 
 import React from 'react';
 import action from '../actions/SocketAction';
-
+import login_store from '../stores/LoginStore';
 class InputBox extends React.Component {
 
   sendMsg() {
     // emit event of send msg
-    let data={msg:this.textInput.value};
+    let data = {msg: this.textInput.value,username:login_store.username};
     action.send(data);
-    this.textInput.value='';
+    this.textInput.value = '';
   }
 
   render() {

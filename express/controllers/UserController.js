@@ -8,13 +8,6 @@ var connection = mysql.createConnection({
  });
 
 var UserController = {
-	index: (req, res, err) => {
-		connection.query('SELECT * FROM articles', function(err, results) {
-			if (err) throw err
-
-			res.json(results);
-		});
-	}
-}
+};
 
 module.exports = UserController;

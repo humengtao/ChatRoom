@@ -52,7 +52,12 @@ var AuthController = {
 
 	//login entry
 	login: (req, res, err) => {
-		
+		if (!req.body.username&&!sess) {
+			console.log('游客加入')
+		} else {
+			console.log(req.body.username +'加入');
+		}
+
 		//检测是否存在与客户端的session
 		if (!!sess) {
 			res.status(200).send(sess);

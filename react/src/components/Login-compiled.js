@@ -63,7 +63,7 @@ var Login = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      if (!this.state.login) {
+      if (!_LoginStore2.default.login_state) {
         return _react2.default.createElement(
           'div',
           { className: 'login' },

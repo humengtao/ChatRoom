@@ -1,0 +1,30 @@
+.user-list{
+  position: fixed;
+  top:0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #666666;
+}
+
+.user-list ul {
+  text-align: left;
+  list-style-type: none;
+}
+
+.user-list li{
+  background-color: #2e2e2e;
+  padding: 5px;
+  margin:5px;
+  height: 20px;
+  line-height: 20px !important;
+}
+
+.user-list img{
+  margin: 0 !important;
+  display: inline-block !important;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #eeeeee;
+  border-radius: 50% !important;
+}

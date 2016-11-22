@@ -16,12 +16,16 @@ var _socket = require('socket.io-client');
 
 var _socket2 = _interopRequireDefault(_socket);
 
+var _LoginStore = require('../stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Store = _reflux2.default.createStore({
-  items: ['123'],
+  items: [],
 
-  socket: '',
+  users: [],
 
   listenables: _SocketAction2.default,
 
@@ -40,6 +44,11 @@ var Store = _reflux2.default.createStore({
     this.socket.emit('client:send', data);
   },
   onReceive: function onReceive(data) {
+    if (data.username == _LoginStore2.default.username) {
+      data.align = 'right';
+    } else {
+      data.align = 'left';
+    }
     this.items.push(data);
     this.trigger(this.items);
   }

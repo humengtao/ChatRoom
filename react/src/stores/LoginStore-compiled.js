@@ -38,13 +38,11 @@ var LoginStore = _reflux2.default.createStore({
       success: function success(data) {
         _this.login_state = true;
         _this.username = data.username;
-        _this.trigger({
-          login_state: _this.login_state,
-          username: _this.username
-        });
+        _LoginAction2.default.triggerall();
       },
       error: function error() {
-        _this.trigger('');
+        _this.username = '(游客)CR-' + ~~(Math.random(1) * 10e9);
+        _LoginAction2.default.triggerall();
       }
     });
   },
@@ -58,15 +56,12 @@ var LoginStore = _reflux2.default.createStore({
       success: function success(data) {
         _this2.login_state = true;
         _this2.username = data.username;
-        _this2.trigger({
-          login_state: _this2.login_state,
-          username: _this2.username
-        });
+        _LoginAction2.default.triggerall();
         _reactRouter.browserHistory.push('/');
       },
       error: function error() {
         _this2.login_state = false;
-        _this2.trigger('');
+        _LoginAction2.default.triggerall();
       }
     });
   },
@@ -100,7 +95,9 @@ var LoginStore = _reflux2.default.createStore({
       url: 'http://localhost:3000/logout',
       method: 'GET',
       success: function success() {
-        _this4.trigger('');
+        _this4.login_state = false;
+        _this4.username = '(游客)CR-' + ~~(Math.random(1) * 10e9);
+        _LoginAction2.default.triggerall();
       },
       failed: function failed() {
         alert('logout failed!');
@@ -109,6 +106,12 @@ var LoginStore = _reflux2.default.createStore({
   },
   onRegistererror: function onRegistererror() {
     this.trigger({ errMsg: '' });
+  },
+  onTriggerall: function onTriggerall() {
+    this.trigger({
+      login_state: this.login_state,
+      username: this.username
+    });
   }
 });
 

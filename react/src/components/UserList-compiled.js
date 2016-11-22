@@ -10,26 +10,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reflux = require('reflux');
-
-var _reflux2 = _interopRequireDefault(_reflux);
-
-var _reactMixin = require('react-mixin');
-
-var _reactMixin2 = _interopRequireDefault(_reactMixin);
-
-var _MessageUnit = require('./MessageUnit');
-
-var _MessageUnit2 = _interopRequireDefault(_MessageUnit);
-
-var _SocketAction = require('../actions/SocketAction');
-
-var _SocketAction2 = _interopRequireDefault(_SocketAction);
-
-var _SocketStore = require('../stores/SocketStore');
-
-var _SocketStore2 = _interopRequireDefault(_SocketStore);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38,46 +18,66 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-require('styles/MessageBox.css');
+/**
+ * Created by humengtao on 2016/11/20.
+ */
+require('styles/UserList.css');
 
-var $ = require('jquery');
+var UserList = function (_React$Component) {
+  _inherits(UserList, _React$Component);
 
-var MessageBox = function (_React$Component) {
-  _inherits(MessageBox, _React$Component);
+  function UserList() {
+    _classCallCheck(this, UserList);
 
-  function MessageBox() {
-    _classCallCheck(this, MessageBox);
-
-    var _this = _possibleConstructorReturn(this, (MessageBox.__proto__ || Object.getPrototypeOf(MessageBox)).call(this));
-
-    _SocketAction2.default.get();
-    _this.state = {
-      height: $(window).height() * 0.5
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (UserList.__proto__ || Object.getPrototypeOf(UserList)).apply(this, arguments));
   }
 
-  _createClass(MessageBox, [{
+  _createClass(UserList, [{
     key: 'render',
     value: function render() {
-      if (!!this.state.store) {
-        return _react2.default.createElement(
-          'div',
-          { className: 'message-box', id: 'message-box', style: { height: this.state.height } },
-          this.state.store.map(function (data, index) {
-            if (!!data.msg) return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg, username: data.username, align: data.align });
-          })
-        );
-      }
-      return _react2.default.createElement('div', { className: 'message-box', id: 'message-box', style: { height: this.state.height } });
+      return _react2.default.createElement(
+        'div',
+        { className: 'user-list' },
+        _react2.default.createElement(
+          'h4',
+          { className: 'tex-center' },
+          '当前在线用户'
+        ),
+        _react2.default.createElement(
+          'ul',
+          null,
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement('img', { src: 'images/avatar.jpg', alt: '' }),
+            ' (hello)'
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement('img', { src: 'images/avatar.jpg', alt: '' }),
+            ' (hello)'
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement('img', { src: 'images/avatar.jpg', alt: '' }),
+            ' (hello)'
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement('img', { src: 'images/avatar.jpg', alt: '' }),
+            ' (hello)'
+          )
+        )
+      );
     }
   }]);
 
-  return MessageBox;
+  return UserList;
 }(_react2.default.Component);
 
-_reactMixin2.default.onClass(MessageBox, _reflux2.default.connect(_SocketStore2.default, 'store'));
+exports.default = UserList;
 
-exports.default = MessageBox;
-
-//# sourceMappingURL=MessageBox-compiled.js.map
+//# sourceMappingURL=UserList-compiled.js.map

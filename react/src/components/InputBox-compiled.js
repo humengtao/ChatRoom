@@ -14,6 +14,10 @@ var _SocketAction = require('../actions/SocketAction');
 
 var _SocketAction2 = _interopRequireDefault(_SocketAction);
 
+var _LoginStore = require('../stores/LoginStore');
+
+var _LoginStore2 = _interopRequireDefault(_LoginStore);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,7 +44,7 @@ var InputBox = function (_React$Component) {
     key: 'sendMsg',
     value: function sendMsg() {
       // emit event of send msg
-      var data = { msg: this.textInput.value };
+      var data = { msg: this.textInput.value, username: _LoginStore2.default.username };
       _SocketAction2.default.send(data);
       this.textInput.value = '';
     }
