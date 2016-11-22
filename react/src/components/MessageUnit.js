@@ -10,14 +10,14 @@ class MessageUnit extends React.Component {
     if (this.props.align == 'left') {
       return (
         <div className="message-unit" style={{textAlign: 'left'}}>
-          <h6 className="line"><span>Oct.13 13:12</span></h6>
+          <h6 className="line"><span>用户:{this.props.username} - 时间:13:12</span></h6>
           <p><span><img src="images/avatar.jpg" style={{float: 'left'}}/>: {this.props.msg}</span></p>
         </div>
       )
     }
     return (
       <div className="message-unit" style={{textAlign: 'right'}}>
-        <h6 className="line"><span>Oct.13 13:12</span></h6>
+        <h6 className="line"><span>用户:自己 - 时间:13:12</span></h6>
         <p><span>{this.props.msg} : <img src="images/avatar.jpg"/></span></p>
       </div>
     )

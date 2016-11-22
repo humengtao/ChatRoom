@@ -6,7 +6,8 @@ const LoginAction = Reflux.createActions([
   'register',
   'logout',
   'registererror',
-  'triggerall'
+  'triggerall',
+  'alluser'
 ]);
 
 export default LoginAction;

@@ -4,7 +4,9 @@ const Action = Reflux.createActions([
   'get',
   'send',
   'receive',
-  'socket'
+  'socket',
+  'new',
+  'all'
 ]);
 
 export default Action;

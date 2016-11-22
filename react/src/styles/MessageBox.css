@@ -1,4 +1,5 @@
 .message-box{
+  word-break: break-all;
   margin-bottom: 20px;
   width: 100%;
   background-color: #fafafa;

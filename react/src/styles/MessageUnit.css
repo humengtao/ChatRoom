@@ -1,4 +1,5 @@
 .message-unit p span{
+  max-width: 60%;
   background-color: #2e2e2e;
   color: goldenrod;
   padding:20px;

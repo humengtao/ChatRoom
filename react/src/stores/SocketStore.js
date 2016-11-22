@@ -7,7 +7,7 @@ import login_store from '../stores/LoginStore';
 const Store = reflux.createStore({
   items: [],
 
-  users:[],
+  users: [],
 
   listenables: actions,
 
@@ -17,10 +17,26 @@ const Store = reflux.createStore({
     this.socket.on('server:broadcast', (data)=> {
       this.onReceive(data);
     });
+    this.socket.on('server:allUser', (data)=> {
+      this.users = [];
+      data.map((index)=> {
+        this.users.push(index.username);
+      });
+      this.trigger({users: this.users});
+    });
+    this.socket.on('server:newUser', (data)=> {
+      if (data != login_store.username && login_store.username != '') {
+        this.users.push(data);
+        this.trigger({users: this.users});
+      }
+    });
+    this.socket.on('server:userLeave', (data)=> {
+      console.log(data + ' 离开');
+    });
   },
 
   onGet(){
-    this.trigger(this.items);
+    this.trigger({items: this.items});
   },
 
   onSend (data){
@@ -28,14 +44,22 @@ const Store = reflux.createStore({
   },
 
   onReceive (data){
-    if(data.username==login_store.username){
-      data.align='right';
+    if (data.username == login_store.username) {
+      data.align = 'right';
     }
     else {
-      data.align='left';
+      data.align = 'left';
     }
     this.items.push(data);
-    this.trigger(this.items);
+    this.trigger({items: this.items});
+  },
+
+  onNew(data){
+    this.socket.emit('client:newUser', data);
+  },
+
+  onAll(){
+    this.socket.emit('client:allUser');
   }
 
 });

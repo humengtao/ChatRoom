@@ -45,7 +45,9 @@ var MessageUnit = function (_React$Component) {
             _react2.default.createElement(
               'span',
               null,
-              'Oct.13 13:12'
+              '用户:',
+              this.props.username,
+              ' - 时间:13:12'
             )
           ),
           _react2.default.createElement(
@@ -70,7 +72,7 @@ var MessageUnit = function (_React$Component) {
           _react2.default.createElement(
             'span',
             null,
-            'Oct.13 13:12'
+            '用户:自己 - 时间:13:12'
           )
         ),
         _react2.default.createElement(

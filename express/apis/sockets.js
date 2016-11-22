@@ -1,7 +1,7 @@
 var router = require('express').Router();
-var userController = require('../controllers/UserController');
+var userController = require('../controllers/SocketController');
 /* GET users listing. */
 router
-	.get('/',()=>{});
+	.get('/', ()=>console.log(app));
 
 module.exports = router;

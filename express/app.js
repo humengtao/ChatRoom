@@ -8,12 +8,14 @@ var session = require('express-session');
 
 var routes = require('./apis/index');
 var users = require('./apis/users');
+var sockets = require('./apis/users');
+
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 app.use(logger('dev'));
@@ -28,7 +30,7 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true,
 	cookie: {
-		httpOnly: false
+		httpOnly: true
 	}
 }));
 
@@ -41,5 +43,6 @@ app.use(function(req, res, next) {
 // prefix    
 app.use('/', routes);
 app.use('/users', users);
+app.use('/socket', sockets);
 
 module.exports = app;

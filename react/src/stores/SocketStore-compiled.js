@@ -36,9 +36,25 @@ var Store = _reflux2.default.createStore({
     this.socket.on('server:broadcast', function (data) {
       _this.onReceive(data);
     });
+    this.socket.on('server:allUser', function (data) {
+      _this.users = [];
+      data.map(function (index) {
+        _this.users.push(index.username);
+      });
+      _this.trigger({ users: _this.users });
+    });
+    this.socket.on('server:newUser', function (data) {
+      if (data != _LoginStore2.default.username && _LoginStore2.default.username != '') {
+        _this.users.push(data);
+        _this.trigger({ users: _this.users });
+      }
+    });
+    this.socket.on('server:userLeave', function (data) {
+      console.log(data + ' 离开');
+    });
   },
   onGet: function onGet() {
-    this.trigger(this.items);
+    this.trigger({ items: this.items });
   },
   onSend: function onSend(data) {
     this.socket.emit('client:send', data);
@@ -50,7 +66,13 @@ var Store = _reflux2.default.createStore({
       data.align = 'left';
     }
     this.items.push(data);
-    this.trigger(this.items);
+    this.trigger({ items: this.items });
+  },
+  onNew: function onNew(data) {
+    this.socket.emit('client:newUser', data);
+  },
+  onAll: function onAll() {
+    this.socket.emit('client:allUser');
   }
 });
 

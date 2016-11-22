@@ -1,6 +1,7 @@
 import reflux from 'reflux';
 import actions from '../actions/LoginAction';
 import {browserHistory} from 'react-router';
+import socket_action from '../actions/SocketAction';
 
 let $ = require('jquery');
 
@@ -17,16 +18,30 @@ const LoginStore = reflux.createStore({
 
   onInit(){
     $.ajax({
-      url: 'http://localhost:3000/login',
-      method: 'POST',
+      url: 'http://localhost:3000/init',
+      method: 'GET',
       success: (data)=> {
-        this.login_state = true;
-        this.username = data.username;
-        actions.triggerall();
+        actions.triggerall(data);
+        if (data.isNew==true){
+          socket_action.new(data.username);
+        }
+        socket_action.all(data.username);
       },
       error: ()=> {
-        this.username='(游客)CR-'+(~~(Math.random(1)*10e9));
-        actions.triggerall();
+        alert('获取信息失败，请重试!');
+      }
+    });
+  },
+
+  onAlluser(){
+    $.ajax({
+      url: 'http://localhost:3000/all-user',
+      method: 'GET',
+      success: (data)=> {
+        actions.triggerall(data);
+      },
+      error: ()=> {
+        alert('获取信息失败，请重试!');
       }
     });
   },
@@ -37,14 +52,10 @@ const LoginStore = reflux.createStore({
       method: 'POST',
       data: {username: username, password: password},
       success: (data)=> {
-        this.login_state = true;
-        this.username = data.username;
-        actions.triggerall();
         browserHistory.push('/')
       },
       error: ()=> {
-        this.login_state = false;
-        actions.triggerall();
+        alert('登录失败，请重试!');
       }
     });
   },
@@ -75,10 +86,9 @@ const LoginStore = reflux.createStore({
     $.ajax({
       url: 'http://localhost:3000/logout',
       method: 'GET',
-      success: ()=> {
-        this.login_state=false;
-        this.username='(游客)CR-'+(~~(Math.random(1)*10e9));
-        actions.triggerall();
+      success: (data)=> {
+        actions.triggerall(data);
+        socket_action.all(data.username);
       },
       failed: ()=> {
         alert('logout failed!');
@@ -90,7 +100,9 @@ const LoginStore = reflux.createStore({
      this.trigger({errMsg:''});
   },
 
-  onTriggerall(){
+  onTriggerall(data){
+    this.login_state = data.login;
+    this.username = data.username;
     this.trigger({
       login_state:this.login_state,
       username:this.username

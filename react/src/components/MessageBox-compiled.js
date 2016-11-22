@@ -58,13 +58,23 @@ var MessageBox = function (_React$Component) {
   }
 
   _createClass(MessageBox, [{
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      $('#message-box').scrollTop(99999999);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
+      // if (!!this.state.store) {
       if (!!this.state.store) {
         return _react2.default.createElement(
           'div',
-          { className: 'message-box', id: 'message-box', style: { height: this.state.height } },
-          this.state.store.map(function (data, index) {
+          { className: 'message-box', id: 'message-box', style: { height: this.state.height }, ref: function ref(div) {
+              return _this2.messageBox = div;
+            } },
+          _SocketStore2.default.items.map(function (data, index) {
             if (!!data.msg) return _react2.default.createElement(_MessageUnit2.default, { key: index.toString(), msg: data.msg, username: data.username, align: data.align });
           })
         );

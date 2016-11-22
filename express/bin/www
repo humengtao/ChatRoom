@@ -16,6 +16,12 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
+ * Require AuthController
+ */
+var authController=require('../controllers/AuthController');
+
+
+/**
  * Create HTTP server.
  */
 
@@ -28,20 +34,34 @@ var io = require('socket.io')(server);
 
 /**
  * Socket Event
- **/
+ */
 
 io.on('connection', (socket) => {
-  socket.on('client:user-coming',(data)=>{
-    io.emit('server:user-coming');
+  var currentUser='';
+  console.log('user connection');
+  //广播发送所有用户
+  socket.on('client:allUser',()=>{
+    authController.getAllConnections(io);
   });
-  io.emit('server:connection', 'you have been connected to 3000');
-  socket.on('client:send',function(data){
-    console.log(data);
-    io.emit('server:broadcast',data);
+
+  socket.on('client:newUser',(data)=>{
+     currentUser=data;
+     console.log('will broadcast new user '+ data);
   });
+
+  socket.on('init',()=>{
+     authController.init(io);
+  });
+
+  socket.on('client:send', function(data) {
+    io.emit('server:broadcast', data);
+  });
+
   socket.on('disconnect', function() {
+    authController.deleteConnection(io,currentUser);
     console.log('user disconnected');
   });
+
 });
 
 /**
